@@ -41,7 +41,6 @@ const App: React.FC = () => {
       threshold: 0.1,
       rootMargin: "0px 0px -50px 0px"
     };
-
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -55,20 +54,19 @@ const App: React.FC = () => {
 
     return () => observer.disconnect();
   }, [activePlatform]);
-
   const facebookServices: Service[] = [
-    { id: 'FB-CORE-001', name: 'Tăng Follow', description: 'Giao thức tăng trưởng người theo dõi thực cho profile và page.', icon: <Users className="w-6 h-6" />, status: 'active', priceInfo: '15k / 1.000' },
-    { id: 'FB-INT-002', name: 'Tăng Like Bài Viết', description: 'Tối ưu hóa chỉ số tương tác bài viết thông qua thuật toán seeding.', icon: <ThumbsUp className="w-6 h-6" />, status: 'active', priceInfo: '20k / 1.000' },
-    { id: 'FB-DST-003', name: 'Tăng Share', description: 'Mở rộng phạm vi phân phối nội dung thông qua mạng lưới nodes.', icon: <Share2 className="w-6 h-6" />, status: 'active', priceInfo: '25k / 1.000' },
-    { id: 'FB-ENG-004', name: 'Tăng Bình Luận', description: 'Hệ thống phản hồi tự động duy trì nhịp độ thảo luận tích cực.', icon: <MessageSquare className="w-6 h-6" />, status: 'active', priceInfo: '500đ / 1 comment' },
-    { id: 'FB-STRM-005', name: 'Tăng Mắt Live', description: 'Gia tăng lưu lượng người xem đồng thời cho phiên phát sóng.', icon: <Video className="w-6 h-6" />, status: 'maintenance', priceInfo: '800đ / 1 mắt xem' },
+    { id: 'FB-CORE-001', name: 'Tăng Follow', description: 'Tăng lượt theo dõi profile và page, tốc độ cao, tăng độ uy tín của tài khoản.', icon: <Users className="w-6 h-6" />, status: 'active', priceInfo: '15k / 1.000' },
+    { id: 'FB-INT-002', name: 'Tăng Like Bài Viết', description: 'Tăng lượt like bài viết, nâng cao chất lượng nội dung.', icon: <ThumbsUp className="w-6 h-6" />, status: 'active', priceInfo: '20k / 1.000' },
+    { id: 'FB-DST-003', name: 'Tăng Share', description: 'Lan toả nội dung đến nhiều đối tượng hơn, mở rộng phạm vi hiển thị của bài viết.', icon: <Share2 className="w-6 h-6" />, status: 'active', priceInfo: '25k / 1.000' },
+    { id: 'FB-ENG-004', name: 'Tăng Bình Luận', description: 'Tăng lượt tương tác với bài viết, thông qua hệ thống tương tác nhanh.', icon: <MessageSquare className="w-6 h-6" />, status: 'active', priceInfo: '500đ / 1 comment' },
+    { id: 'FB-STRM-005', name: 'Tăng Mắt Live', description: 'Tăng số lượng người xem cho phiên live, thu hút đề xuất nội dung.', icon: <Video className="w-6 h-6" />, status: 'maintenance', priceInfo: '800đ / 1 mắt xem' },
   ];
 
   const tiktokServices: Service[] = [
-    { id: 'TT-CORE-101', name: 'Tăng Follow', description: 'Xây dựng tệp người hâm mộ trung thành dựa trên thuật toán xu hướng.', icon: <Users className="w-6 h-6" />, status: 'active', priceInfo: '45K / 1.000 follow' },
-    { id: 'TT-RCT-102', name: 'Tăng Tym Video', description: 'Gia tăng điểm số uy tín nội dung thông qua hệ thống tương tác nhanh.', icon: <Heart className="w-6 h-6" />, status: 'active', priceInfo: '18K / 1.000 tym' },
-    { id: 'TT-DST-103', name: 'Tăng Share', description: 'Viral hóa nội dung ngắn trên diện rộng trong thời gian ngắn.', icon: <Share2 className="w-6 h-6" />, status: 'active', priceInfo: '10k / 1.000 lượt' },
-    { id: 'TT-VW-104', name: 'Tăng View', description: 'Đảm bảo chỉ số lượt xem ổn định, thúc đẩy thuật toán đề xuất.', icon: <Eye className="w-6 h-6" />, status: 'active', priceInfo: '4K / 1.000 view' },
+    { id: 'TT-CORE-101', name: 'Tăng Follow', description: 'Tăng lượt theo dõi tài khoản tiktok, tốc độ lên nhanh.', icon: <Users className="w-6 h-6" />, status: 'active', priceInfo: '45K / 1.000 follow' },
+    { id: 'TT-RCT-102', name: 'Tăng Tym Video', description: 'Tăng số lượt thả tym cho video, giúp đề xuất tốt hơn cho video', icon: <Heart className="w-6 h-6" />, status: 'active', priceInfo: '18K / 1.000 tym' },
+    { id: 'TT-DST-103', name: 'Tăng Share', description: 'Mở rộng phạm vi hiển thị của video, tiếp cận được nhiều người xem hơn.', icon: <Share2 className="w-6 h-6" />, status: 'active', priceInfo: '10k / 1.000 lượt' },
+    { id: 'TT-VW-104', name: 'Tăng View', description: 'Tăng số lượt xem , thúc đẩy tương tác và đề xuất cho video.', icon: <Eye className="w-6 h-6" />, status: 'active', priceInfo: '4K / 1.000 view' },
   ];
 
   const currentServices = activePlatform === Platform.FACEBOOK ? facebookServices : tiktokServices;
@@ -199,6 +197,7 @@ const App: React.FC = () => {
       </a>
     </div>
   );
+
 };
 
 export default App;

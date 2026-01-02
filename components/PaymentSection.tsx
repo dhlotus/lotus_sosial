@@ -49,7 +49,7 @@ const PaymentSection: React.FC = () => {
                   <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-72 md:h-72 bg-white rounded-2xl overflow-hidden shadow-2xl">
                     <div className="absolute top-0 left-0 w-full h-1 bg-blue-500 shadow-[0_0_15px_#3b82f6] z-10 animate-scanline"></div>
                     <img
-                      src="./img/QRCODEBANK.png"
+                      src="/lotus_sosial/img/QRCODEBANK.png"
                       alt="Bank QR Code"
                       className="w-full h-full object-contain p-1"
                     />
@@ -78,9 +78,9 @@ const PaymentSection: React.FC = () => {
                 <div className="flex items-center gap-3 p-4 bg-gray-900/50 border border-gray-800/50 rounded-2xl transition-all hover:bg-gray-800/50">
                   <div className="shrink-0 w-10 h-10 bg-white p-0 rounded-lg flex items-center justify-center shadow-inner">
                     <img
-                      src="./img/mbbank-logo.png"
+                      src="/lotus_sosial/img/mbbank-logo.png"
                       alt="MB Bank"
-                      className="w-full h-full object-contain" style={{ borderRadius: '16%' }}
+                      className="w-full h-full object-contain"
                     />
                   </div>
                   <div className="min-w-0">
@@ -116,7 +116,7 @@ const PaymentSection: React.FC = () => {
                     </div>
                     <div className="text-left">
                       <label className={`block text-[8px] font-mono uppercase tracking-widest font-black mb-1 ${copied ? 'text-emerald-400' : 'text-blue-400'}`}>
-                        {copied ? 'Data Copied to Clipboard' : 'Số tài khoản'}
+                        {copied ? 'Đã sao chép số tài khoản' : 'Số tài khoản'}
                       </label>
                       <p className="text-white font-black text-xl md:text-3xl tracking-tighter tabular-nums leading-none">
                         {accountNumber}

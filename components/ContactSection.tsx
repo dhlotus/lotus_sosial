@@ -29,7 +29,7 @@ const ContactSection: React.FC = () => {
             </h2>
 
             <p className="text-gray-400 text-sm md:text-lg font-medium leading-relaxed">
-              Kết nối trực tiếp với <span className="text-blue-400 font-bold">LOTUS</span> qua cổng Zalo bảo mật để nhận báo giá ưu đãi và lộ trình tăng trưởng tối ưu nhất.
+              Kết nối trực tiếp với <span className="text-blue-400 font-bold">LOTUS</span> qua cổng Zalo để hỗ trợ lên đơn.
             </p>
 
             {/* Micro Badges */}
